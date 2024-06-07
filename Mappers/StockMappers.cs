@@ -18,5 +18,18 @@ namespace backend.Mappers
                 Symbol = stock.Symbol,
             };
         }
+
+        public static Stock ToStockFromCreateDto(this CreateStockRequestDto stockDto)
+        {
+            return new Stock
+            {
+                Industry = stockDto.Symbol,
+                CompanyName = stockDto.CompanyName,
+                LastDiv = stockDto.LastDiv,
+                MarketCap = stockDto.MarketCap,
+                Purchase = stockDto.Purchase,
+                Symbol = stockDto.Symbol,
+            };
+        }
     }
 }

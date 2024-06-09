@@ -16,6 +16,7 @@ namespace backend.Mappers
                 MarketCap = stock.MarketCap,
                 Purchase = stock.Purchase,
                 Symbol = stock.Symbol,
+                Comments = stock.Comments.Select((comment) => comment.ToCommentDto()).ToList(),
             };
         }
 
